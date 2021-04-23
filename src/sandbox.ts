@@ -80,19 +80,33 @@
 
 // console.log("workk!");
 
-let greet: Function;
-greet = () => {
-	console.log("hello world!");
+// functions
+// let greet: Function;
+// greet = () => {
+// 	console.log("hello world!");
+// };
+
+// const add = (a: number, b: number, c: number | string = 10): void => {
+// 	console.log(a + b);
+// 	console.log(c);
+// };
+
+// add(5, 11, "hello");
+
+// const minus = (a: number, b: number) => {
+// 	return a + b;
+// };
+// let result = minus(10, 9);
+const logDetails = (uid: string | number, item: string) => {
+	console.log(`${item} has a uid of ${uid}`);
+};
+// type aliases
+type StrOrNum = string | number;
+type objeWName = { name: string; uid: StrOrNum };
+const greet = (user: { name: string; uid: StrOrNum }) => {
+	console.log(`${user.name} says hello`);
 };
 
-const add = (a: number, b: number, c: number | string = 10): void => {
-	console.log(a + b);
-	console.log(c);
+const greetAgain = (user: objeWName) => {
+	console.log(`${user.name} says hello`);
 };
-
-add(5, 11, "hello");
-
-const minus = (a: number, b: number) => {
-	return a + b;
-};
-let result = minus(10, 9);
