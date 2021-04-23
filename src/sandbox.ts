@@ -64,18 +64,35 @@
 // };
 // personTwo = { name: "momen", age: 22 };
 
-let age: any = 25;
-age = true;
-console.log(age);
-age = "hi";
-console.log(age);
+// let age: any = 25;
+// age = true;
+// console.log(age);
+// age = "hi";
+// console.log(age);
 
-let mixed: any[] = [];
-mixed.push(22);
-mixed.push("eslam");
-mixed.push(true);
-console.log(mixed);
+// let mixed: any[] = [];
+// mixed.push(22);
+// mixed.push("eslam");
+// mixed.push(true);
+// console.log(mixed);
 
-let ninja: {};
+// let ninja: {};
 
-console.log("workk!");
+// console.log("workk!");
+
+let greet: Function;
+greet = () => {
+	console.log("hello world!");
+};
+
+const add = (a: number, b: number, c: number | string = 10): void => {
+	console.log(a + b);
+	console.log(c);
+};
+
+add(5, 11, "hello");
+
+const minus = (a: number, b: number) => {
+	return a + b;
+};
+let result = minus(10, 9);

@@ -53,15 +53,29 @@
 // 	age: number;
 // };
 // personTwo = { name: "momen", age: 22 };
-var age = 25;
-age = true;
-console.log(age);
-age = "hi";
-console.log(age);
-var mixed = [];
-mixed.push(22);
-mixed.push("eslam");
-mixed.push(true);
-console.log(mixed);
-var ninja;
-console.log("workk!");
+// let age: any = 25;
+// age = true;
+// console.log(age);
+// age = "hi";
+// console.log(age);
+// let mixed: any[] = [];
+// mixed.push(22);
+// mixed.push("eslam");
+// mixed.push(true);
+// console.log(mixed);
+// let ninja: {};
+// console.log("workk!");
+var greet;
+greet = function () {
+    console.log("hello world!");
+};
+var add = function (a, b, c) {
+    if (c === void 0) { c = 10; }
+    console.log(a + b);
+    console.log(c);
+};
+add(5, 11, "hello");
+var minus = function (a, b) {
+    return a + b;
+};
+var result = minus(10, 9);
