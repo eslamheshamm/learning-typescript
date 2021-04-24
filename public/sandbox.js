@@ -79,12 +79,40 @@
 // 	return a + b;
 // };
 // let result = minus(10, 9);
-var logDetails = function (uid, item) {
-    console.log(item + " has a uid of " + uid);
+// const logDetails = (uid: string | number, item: string) => {
+// 	console.log(`${item} has a uid of ${uid}`);
+// };
+// type aliases
+// type StrOrNum = string | number;
+// type objeWName = { name: string; uid: StrOrNum };
+// const greet = (user: { name: string; uid: StrOrNum }) => {
+// 	console.log(`${user.name} says hello`);
+// };
+// const greetAgain = (user: objeWName) => {
+// 	console.log(`${user.name} says hello`);
+// };
+var greet;
+greet = function (name, greeting) {
+    console.log(name + ", says " + greeting);
 };
-var greet = function (user) {
-    console.log(user.name + " says hello");
+var calc;
+calc = function (numOne, numTwo, action) {
+    if (action === "add") {
+        return numOne + numTwo;
+    }
+    else
+        return numOne - numTwo;
 };
-var greetAgain = function (user) {
-    console.log(user.name + " says hello");
+console.log(calc(20, 32));
+console.log(calc(20, 32, "add"));
+var logDetails;
+logDetails = function (person) {
+    if (person.age) {
+        console.log(person.name + " is " + person.age + " years old");
+    }
+    else {
+        console.log("please write your age " + person.name);
+    }
 };
+logDetails({ name: "eslam", age: 20 });
+logDetails({ name: "ahmed" });

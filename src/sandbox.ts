@@ -97,16 +97,46 @@
 // 	return a + b;
 // };
 // let result = minus(10, 9);
-const logDetails = (uid: string | number, item: string) => {
-	console.log(`${item} has a uid of ${uid}`);
-};
+// const logDetails = (uid: string | number, item: string) => {
+// 	console.log(`${item} has a uid of ${uid}`);
+// };
 // type aliases
-type StrOrNum = string | number;
-type objeWName = { name: string; uid: StrOrNum };
-const greet = (user: { name: string; uid: StrOrNum }) => {
-	console.log(`${user.name} says hello`);
+// type StrOrNum = string | number;
+// type objeWName = { name: string; uid: StrOrNum };
+// const greet = (user: { name: string; uid: StrOrNum }) => {
+// 	console.log(`${user.name} says hello`);
+// };
+
+// const greetAgain = (user: objeWName) => {
+// 	console.log(`${user.name} says hello`);
+// };
+
+let greet: (a: string, b: string) => void;
+greet = (name: string, greeting: string) => {
+	console.log(`${name}, says ${greeting}`);
 };
 
-const greetAgain = (user: objeWName) => {
-	console.log(`${user.name} says hello`);
+let calc: (a: number, b: number, c?: string) => number;
+
+calc = (numOne: number, numTwo: number, action?: string) => {
+	if (action === "add") {
+		return numOne + numTwo;
+	} else return numOne - numTwo;
 };
+console.log(calc(20, 32));
+console.log(calc(20, 32, "add"));
+
+type person = { name: string; age?: number };
+
+let logDetails: (obj: person) => void;
+
+logDetails = (person: person) => {
+	if (person.age) {
+		console.log(`${person.name} is ${person.age} years old`);
+	} else {
+		console.log(`please write your age ${person.name}`);
+	}
+};
+
+logDetails({ name: "eslam", age: 20 });
+logDetails({ name: "ahmed " });
