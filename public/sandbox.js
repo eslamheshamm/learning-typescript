@@ -115,4 +115,4 @@ logDetails = function (person) {
     }
 };
 logDetails({ name: "eslam", age: 20 });
-logDetails({ name: "ahmed" });
+logDetails({ name: "ahmed " });
