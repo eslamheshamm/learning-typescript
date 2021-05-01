@@ -6,6 +6,18 @@
 // 	console.log(anchor.href);
 // }
 // const form = document.querySelector('form')!;
+// classes
+var Invoice = /** @class */ (function () {
+    function Invoice(a, b, c) {
+        this.client = a;
+        this.details = b;
+        this.amount = c;
+    }
+    Invoice.prototype.format = function () {
+        return this.client + " owes :$" + this.amount + " for " + this.details;
+    };
+    return Invoice;
+}());
 // Type Casting
 var form = document.querySelector(".new-item-form");
 // console.log(form.children);
