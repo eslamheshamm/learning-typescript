@@ -9,19 +9,33 @@
 // const form = document.querySelector('form')!;
 // classes
 class Invoice {
-	client: string;
-	details: string;
-	amount: number;
-	constructor(a: string, b: string, c: number) {
-		this.client = a;
-		this.details = b;
-		this.amount = c;
+	// readonly client: string;
+	// public details: string;
+	// private amount: number;
+	constructor(
+		readonly client: string, // shorthand if i write modifiers
+		public details: string,
+		private amount: number
+	) {
+		// this.client = a;
+		// this.details = b;
+		// this.amount = c;
 	}
 	format() {
-		return `${this.client} owes :$${this.amount} for ${this.details}`;
+		return `${this.client} owes: ${this.amount} for ${this.details}`;
 	}
 }
+const invOne = new Invoice("eslam", "work on the website", 200);
+const invTwo = new Invoice("momen", "work on the design", 250);
 
+let Invoices: Invoice[] = [];
+
+Invoices.push(invOne);
+Invoices.push(invTwo);
+Invoices.forEach((inv) => {
+	console.log(inv.client, inv.details, inv.format());
+});
+console.log(Invoices);
 // Type Casting
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 // console.log(form.children);

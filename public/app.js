@@ -8,16 +8,32 @@
 // const form = document.querySelector('form')!;
 // classes
 var Invoice = /** @class */ (function () {
-    function Invoice(a, b, c) {
-        this.client = a;
-        this.details = b;
-        this.amount = c;
+    // readonly client: string;
+    // public details: string;
+    // private amount: number;
+    function Invoice(client, // shorthand if i write modifiers
+    details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
+        // this.client = a;
+        // this.details = b;
+        // this.amount = c;
     }
     Invoice.prototype.format = function () {
-        return this.client + " owes :$" + this.amount + " for " + this.details;
+        return this.client + " owes: " + this.amount + " for " + this.details;
     };
     return Invoice;
 }());
+var invOne = new Invoice("eslam", "work on the website", 200);
+var invTwo = new Invoice("momen", "work on the design", 250);
+var Invoices = [];
+Invoices.push(invOne);
+Invoices.push(invTwo);
+Invoices.forEach(function (inv) {
+    console.log(inv.client, inv.details, inv.format());
+});
+console.log(Invoices);
 // Type Casting
 var form = document.querySelector(".new-item-form");
 // console.log(form.children);
