@@ -91,12 +91,12 @@
 // const greetAgain = (user: objeWName) => {
 // 	console.log(`${user.name} says hello`);
 // };
-var greet;
-greet = function (name, greeting) {
-    console.log(name + ", says " + greeting);
+let greet;
+greet = (name, greeting) => {
+    console.log(`${name}, says ${greeting}`);
 };
-var calc;
-calc = function (numOne, numTwo, action) {
+let calc;
+calc = (numOne, numTwo, action) => {
     if (action === "add") {
         return numOne + numTwo;
     }
@@ -105,13 +105,13 @@ calc = function (numOne, numTwo, action) {
 };
 console.log(calc(20, 32));
 console.log(calc(20, 32, "add"));
-var logDetails;
-logDetails = function (person) {
+let logDetails;
+logDetails = (person) => {
     if (person.age) {
-        console.log(person.name + " is " + person.age + " years old");
+        console.log(`${person.name} is ${person.age} years old`);
     }
     else {
-        console.log("please write your age " + person.name);
+        console.log(`please write your age ${person.name}`);
     }
 };
 logDetails({ name: "eslam", age: 20 });

@@ -2,11 +2,31 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>TypeScript Tutorial</title>
+		<title>TypeScript</title>
 		<link rel="stylesheet" href="styles.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
 	</head>
 	<body>
 		<div class="wrapper">
+			<div>
+				<h1>Calc</h1>
+				<input
+					type="number"
+					name="number one"
+					id="num1"
+					placeholder="Number One"
+				/>
+				<input
+					type="number"
+					name="number two"
+					id="num2"
+					placeholder="Number Two"
+				/>
+				<button class="add">Add</button>
+				<button class="minus">Minus</button>
+				<button class="divistion">Divisiton</button>
+			</div>
+
 			<h1>Finance Logger</h1>
 
 			<!-- output list -->
@@ -46,6 +66,6 @@
 			</div>
 		</footer>
 
-		<script src="app.js"></script>
+		<script type="module" src="app.js"></script>
 	</body>
 </html>

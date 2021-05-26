@@ -140,4 +140,3 @@ logDetails = (person: person) => {
 
 logDetails({ name: "eslam", age: 20 });
 logDetails({ name: "ahmed " });
-
