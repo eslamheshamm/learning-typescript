@@ -107,3 +107,17 @@ addAndHandle(2, 522, (result) => {
         console.log("Result is not integer");
     }
 });
+let userInput; // is differnt than ' any ' it has type checking
+let userName;
+userInput = 21;
+userInput = "Eslam";
+if (typeof userInput === "string") {
+    userName = userInput;
+}
+function generatError(message, code) {
+    throw {
+        message: message,
+        errorCode: code,
+    };
+}
+generatError("An error occured", 200);
