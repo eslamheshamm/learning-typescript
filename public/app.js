@@ -95,3 +95,15 @@ printResult(add(2, 2));
 let combineValues;
 combineValues = add;
 console.log(combineValues(2, 4));
+function addAndHandle(n1, n2, cb) {
+    const result = n1 + n2;
+    cb(result);
+}
+addAndHandle(2, 522, (result) => {
+    if (result) {
+        console.log(result);
+    }
+    else {
+        console.log("Result is not integer");
+    }
+});

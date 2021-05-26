@@ -119,3 +119,15 @@ printResult(add(2, 2));
 let combineValues: (a: number, b: number) => number;
 combineValues = add;
 console.log(combineValues(2, 4));
+
+function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
+	const result = n1 + n2;
+	cb(result);
+}
+addAndHandle(2, 522, (result) => {
+	if (result) {
+		console.log(result);
+	} else {
+		console.log("Result is not integer");
+	}
+});
