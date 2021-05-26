@@ -88,3 +88,34 @@ for (const hobby of person.hobbies) {
 if (person.role === Role.ADMIN) {
 	console.log("Admin");
 }
+type Cominable = number | string;
+type ConverstionDescriptor = "as-number" | "as-text";
+
+const combine = (
+	input1: Cominable,
+	input2: Cominable,
+	resultConversion: ConverstionDescriptor
+) => {
+	let result;
+	if (
+		(typeof input1 === "number" && typeof input2 === "number") ||
+		resultConversion === "as-number"
+	) {
+		result = +input1 + +input2;
+	} else {
+		result = `${input1.toString().toUpperCase()} ${input2
+			.toString()
+			.toUpperCase()}`;
+	}
+	return result;
+};
+console.log(combine(20, 224, "as-number"));
+console.log(combine("hesham", "eslam", "as-text"));
+
+const printResult = (num: number): void => {
+	console.log(`Result:  ${num}`);
+};
+printResult(add(2, 2));
+let combineValues: (a: number, b: number) => number;
+combineValues = add;
+console.log(combineValues(2, 4));
